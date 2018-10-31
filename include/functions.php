@@ -417,7 +417,7 @@ public function JapaneseHanko($hanko_align,$hanko_horz,$hanko_vert,$hanko_visabl
 // END JapaneseHanko
 
 // -----------------------------------------------------------------------------
-// Global TaNK Defaults
+// Defaults
 
 public function gt_address($font,$company,$address,$created) {
 
@@ -573,7 +573,7 @@ public function cost_summary($lang,$install_cost,$monthly_cost) {
 }	
 
 // -----------------------------------------------------------------------------
-// Global TaNK Defaults
+// Defaults
 
 public function sys_defaults() {
 

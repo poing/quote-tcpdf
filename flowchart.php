@@ -2,7 +2,7 @@
 /* --------------------------------------------------------
 -----------------------------------------------------------
 
-   Global TaNK : Proprietary & Confidential
+   Proprietary & Confidential
 
 -----------------------------------------------------------
 
@@ -11,7 +11,7 @@
  Verison:  0.2
  
  Author: Brian LaVallee  
- E-Mail: b.lavallee@globaltank.jp
+ E-Mail: b.lavallee@invite-comm.jp
  E-Mail: blavalleebvn@gmail.com
  
  Purpose: Create English and Japanese Quotes

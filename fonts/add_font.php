@@ -3,7 +3,7 @@
 /* --------------------------------------------------------
 -----------------------------------------------------------
 
-   Global TaNK : Proprietary & Confidential
+   Proprietary & Confidential
 
 -----------------------------------------------------------
 
@@ -12,7 +12,7 @@
  Verison:  0.1
  
  Author: Brian LaVallee  
- E-Mail: b.lavallee@globaltank.jp
+ E-Mail: b.lavallee@invite-comm.jp
  E-Mail: blavalleebvn@gmail.com
  
  Purpose: Simplify adding Japanese Fonts to TCPDF
