@@ -1,0 +1,23 @@
+SELECT
+ id, name 
+FROM  
+(SELECT id, name
+FROM `accounts`
+ORDER BY `accounts`.`date_modified` DESC
+LIMIT 10) AS a
+
+UNION
+
+SELECT
+ 0, "--------"
+ 
+UNION
+
+SELECT id, name
+FROM
+(SELECT id, name
+FROM `accounts`
+WHERE name NOT LIKE "%New Customer%"
+ORDER BY `accounts`.`name` ASC) AS b;
+
+

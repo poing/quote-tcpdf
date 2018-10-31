@@ -1,0 +1,78 @@
+CREATE TABLE IF NOT EXISTS `items` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
+  `unit_id` int(11) NOT NULL,
+  `item_name_en` varchar(255) NOT NULL,
+  `item_name_ja` varchar(255) NOT NULL,  
+  `price` double NOT NULL,
+  `description_en` longtext,
+  `description_ja` longtext,
+  `is_taxable` bit(1) DEFAULT b'1',    
+  `is_active` bit(1) DEFAULT b'1'
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `units` (
+  `unit_id` int(11) NOT NULL AUTO_INCREMENT,
+  `unit_name_en` varchar(255) NOT NULL,
+  `unit_name_ja` varchar(255) NOT NULL,
+  `description_en` longtext,
+  `description_ja` longtext,
+  PRIMARY KEY (`unit_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_name_en` varchar(255) NOT NULL,
+  `cat_name_ja` varchar(255) NOT NULL,  
+  `description_en` longtext,
+  `description_ja` longtext,
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `note` (
+  `note_id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_name_en` longtext,
+  `item_name_ja` longtext,
+  PRIMARY KEY (`note_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `quote` (
+  `quote_id` int(11) NOT NULL AUTO_INCREMENT,
+  `quote_number` char(36) NOT NULL,
+  `account_id` char(36) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `delivery_id` int(11) NOT NULL,
+  `payment_id` int(11) NOT NULL,
+  PRIMARY KEY (`quote_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;  
+
+CREATE TABLE IF NOT EXISTS `service` (
+  `service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `svc_name_en` varchar(255) NOT NULL,
+  `svc_name_ja` varchar(255) NOT NULL,  
+  `description_en` longtext,
+  `description_ja` longtext,
+  PRIMARY KEY (`service_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `delivery` (
+  `delivery_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dlvr_name_en` varchar(255) NOT NULL,
+  `dlvr_name_ja` varchar(255) NOT NULL,  
+  `description_en` longtext,
+  `description_ja` longtext,
+  PRIMARY KEY (`delivery_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `payment` (
+  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pay_name_en` varchar(255) NOT NULL,
+  `pay_name_ja` varchar(255) NOT NULL,  
+  `description_en` longtext,
+  `description_ja` longtext,
+  PRIMARY KEY (`payment_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+

@@ -1,0 +1,48 @@
+SELECT
+ p.quote_number AS quote_number,
+ p.create AS create_date,
+ cstm.name_en_c AS name_en,
+ crm.name AS name_ja,
+ s.svc_name_en AS svc_en,
+ s.svc_name_ja AS svc_ja,
+ d.dlvr_name_en AS dlvr_en,
+ d.dlvr_name_ja AS dlvr_ja,
+ pay.pay_name_en AS pay_en,
+ pay.pay_name_ja AS pay_ja
+FROM
+ products.quote AS p
+LEFT JOIN
+ sugarcrm.accounts AS crm
+ON
+ p.account_id=crm.id
+LEFT JOIN
+ sugarcrm.accounts_cstm AS cstm
+ON
+ p.account_id=cstm.id_c 
+LEFT JOIN
+ products.service AS s
+ON
+ p.service_id=s.service_id 
+LEFT JOIN
+ products.delivery AS d
+ON
+ p.delivery_id=d.delivery_id
+LEFT JOIN
+ products.payment AS pay
+ON
+ p.payment_id=pay.payment_id 
+WHERE p.quote_number = "540919c061a00"; 
+
+
+
+SELECT
+ 1 AS quote_number,
+ NOW() AS create_date,
+ 1 AS name_en,
+ 1 AS name_ja,
+ 1 AS svc_en,
+ 1 AS svc_ja,
+ 1 AS dlvr_en,
+ 1 AS dlvr_ja,
+ 1 AS pay_en,
+ 1 AS pay_ja

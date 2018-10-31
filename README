@@ -1,0 +1,8 @@
+Built using tcpdf_6_0_086
+
+This is a basic, yet fully functional quote generator.
+Need to empty and modify the following tables.
+
+test.draft
+test.invoice
+test.notes
